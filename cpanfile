@@ -1,6 +1,8 @@
-# requires 'Exporter'                      => '0';
 requires 'parent'                        => '0';
-# requires 'Plack'                         => '0.9949';
+requires 'File::ShareDir';
+requires 'if';
+requires 'MRO::Compat';
+requires 'Amon2' => '3.76';
 
 on 'configure' => sub {
     requires 'Module::Build' => '0.40';

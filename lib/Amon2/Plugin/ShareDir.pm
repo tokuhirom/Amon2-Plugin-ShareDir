@@ -4,7 +4,34 @@ use warnings;
 use 5.008005;
 our $VERSION = '0.0.1';
 
+use File::Spec;
+use File::ShareDir;
+use if $] < 5.009_005, 'MRO::Compat';
+use List::Util qw(first);
+use Amon2::Util;
 
+sub init {
+    my ($class, $c, $conf) = @_;
+    Amon2::Util::add_method($c, 'share_dir', \&_share_dir);
+}
+
+our %SHARE_DIR_CACHE;
+sub _share_dir {
+    my $c = shift;
+    my $klass = ref $c || $c;
+
+    $SHARE_DIR_CACHE{$klass} ||= sub {
+        my $d1 = File::Spec->catfile($c->base_dir, 'share');
+        return $d1 if -d $d1;
+
+        my $dist = first { $_ ne 'Amon2' && $_ ne 'Amon2::Web' && $_->isa('Amon2') } reverse @{mro::get_linear_isa(ref $c || $c)};
+           $dist =~ s!::!-!g;
+        my $d2 = File::ShareDir::dist_dir($dist);
+        return $d2 if -d $d2;
+
+        Carp::croak "Cannot find assets path($d1, $d2).";
+    }->();
+}
 
 1;
 __END__
@@ -13,15 +40,19 @@ __END__
 
 =head1 NAME
 
-Amon2::Plugin::ShareDir - ...
+Amon2::Plugin::ShareDir - (EXPERIMENTAL) share directory
 
 =head1 SYNOPSIS
 
-  use Amon2::Plugin::ShareDir;
+    # MyApp.pm
+    __PACKAGE__->load_plugin('ShareDir');
+
+    # in your app
+    my $tmpl_path = catdir(MyApp->share_dir(), 'tmpl');
 
 =head1 DESCRIPTION
 
-Amon2::Plugin::ShareDir is
+Put assets to share/ directory. Please look L<Ukigumo::Agent> for example.
 
 B<THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE>.
 
@@ -30,6 +61,8 @@ B<THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE>.
 Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF@ GMAIL COME<gt>
 
 =head1 SEE ALSO
+
+L<Amon2>, L<File::ShareDir>
 
 =head1 LICENSE
 
