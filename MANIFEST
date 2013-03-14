@@ -3,15 +3,18 @@ Build.PL
 Changes
 cpanfile
 lib/Amon2/Plugin/ShareDir.pm
+LICENSE
 MANIFEST			This list of files
+META.json
+META.yml
+README
 t/00_compile.t
+t/600_plugins/020_share_dir.t
+t/600_plugins/dist/MyApp/foo
+t/600_plugins/share/foo
 xt/01_podspell.t
 xt/02_perlcritic.t
 xt/03_pod.t
 xt/04_minimum_version.t
 xt/05_cpan_meta.t
 xt/06_meta_author.t
-README
-LICENSE
-META.yml
-META.json
