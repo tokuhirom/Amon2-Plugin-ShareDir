@@ -2,7 +2,7 @@ package Amon2::Plugin::ShareDir;
 use strict;
 use warnings;
 use 5.008005;
-our $VERSION = '0.0.1';
+our $VERSION = '0.0.2';
 
 use File::Spec;
 use File::ShareDir;
@@ -55,6 +55,16 @@ Amon2::Plugin::ShareDir - (EXPERIMENTAL) share directory
 Put assets to share/ directory. Please look L<Ukigumo::Agent> for example.
 
 B<THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE>.
+
+=head1 STRATEGY
+
+=over 4
+
+=item use catdir($c->base_dir, 'share') if not installed to system
+
+=item use dist_dir($dist_naem) if installed to system
+
+=back
 
 =head1 AUTHOR
 
