@@ -2,6 +2,11 @@ Revision history for Perl extension Amon2::Plugin::ShareDir
 
 {{$NEXT}}
 
+0.0.3 2013-04-02T06:22:35Z
+
+    - Fixed dependencies
+    - Win32 test case fix
+
 0.0.2 2013-03-14T17:51:18
 
     - fixed docs
