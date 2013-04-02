@@ -1,0 +1,67 @@
+{
+   "abstract" : "(EXPERIMENTAL) share directory",
+   "author" : [
+      "Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v0.0.49, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Amon2-Plugin-ShareDir",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "CPAN::Meta" : "0",
+            "Module::Build" : "0.40",
+            "Module::Build::Pluggable" : "0",
+            "Module::Build::Pluggable::CPANfile" : "0",
+            "Module::Build::Pluggable::GithubMeta" : "0"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Pod::Wordlist::hanekomu" : "0",
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spelling" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Amon2" : "3.76",
+            "File::ShareDir" : "0",
+            "MRO::Compat" : "0",
+            "if" : "0",
+            "parent" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.98",
+            "Test::Requires" : "0"
+         }
+      }
+   },
+   "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/tokuhirom/Amon2-Plugin-ShareDir/issues"
+      },
+      "homepage" : "https://github.com/tokuhirom/Amon2-Plugin-ShareDir",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/tokuhirom/Amon2-Plugin-ShareDir.git",
+         "web" : "https://github.com/tokuhirom/Amon2-Plugin-ShareDir"
+      }
+   },
+   "version" : "0.0.2",
+   "x_contributors" : [
+      "tokuhirom <tokuhirom@gmail.com>"
+   ]
+}
