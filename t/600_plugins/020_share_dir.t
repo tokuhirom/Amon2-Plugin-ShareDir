@@ -31,7 +31,7 @@ no warnings 'redefine', 'once';
 local *File::ShareDir::dist_dir = sub { "t/600_plugins/dist/$_[0]" };
 local $BASE_DIR = '/notexistent/';
 
-is(MyApp->share_dir(), 't/600_plugins/dist/MyApp');
+like(MyApp->share_dir(), qr!^t[/\\]600_plugins[/\\]dist[/\\]MyApp!);
 
 done_testing;
 
