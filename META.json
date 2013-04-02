@@ -17,10 +17,7 @@
       "configure" : {
          "requires" : {
             "CPAN::Meta" : "0",
-            "Module::Build" : "0.40",
-            "Module::Build::Pluggable" : "0",
-            "Module::Build::Pluggable::CPANfile" : "0",
-            "Module::Build::Pluggable::GithubMeta" : "0"
+            "Module::Build" : "0.38"
          }
       },
       "develop" : {
@@ -38,7 +35,8 @@
             "File::ShareDir" : "0",
             "MRO::Compat" : "0",
             "if" : "0",
-            "parent" : "0"
+            "parent" : "0",
+            "perl" : "5.008005"
          }
       },
       "test" : {
