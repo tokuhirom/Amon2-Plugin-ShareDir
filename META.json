@@ -13,6 +13,16 @@
       "version" : "2"
    },
    "name" : "Amon2-Plugin-ShareDir",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples"
+      ]
+   },
    "prereqs" : {
       "configure" : {
          "requires" : {
@@ -63,7 +73,7 @@
          "web" : "https://github.com/tokuhirom/Amon2-Plugin-ShareDir"
       }
    },
-   "version" : "v0.0.4",
+   "version" : "v0.0.5",
    "x_contributors" : [
       "tokuhirom <tokuhirom@gmail.com>"
    ]
