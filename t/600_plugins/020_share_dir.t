@@ -23,8 +23,8 @@ our $BASE_DIR = dirname(__FILE__);
     use parent qw/Amon2::Web/;
 }
 
-is(MyApp::Web->share_dir(), 't/600_plugins/share');
-is(MyApp->share_dir(), 't/600_plugins/share');
+like(MyApp::Web->share_dir(), qr{^t.600_plugins.share$});
+like(MyApp->share_dir(), qr{^t.600_plugins.share$});
 
 no warnings 'redefine', 'once';
 %Amon2::Plugin::ShareDir::SHARE_DIR_CACHE = ();
