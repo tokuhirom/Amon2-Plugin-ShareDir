@@ -17,6 +17,7 @@
       "configure" : {
          "requires" : {
             "CPAN::Meta" : "0",
+            "CPAN::Meta::Prereqs" : "0",
             "Module::Build" : "0.38"
          }
       },
@@ -32,11 +33,15 @@
       "runtime" : {
          "requires" : {
             "Amon2" : "3.76",
+            "Amon2::Util" : "0",
+            "Amon2::Web" : "0",
             "File::ShareDir" : "0",
+            "List::Util" : "0",
             "MRO::Compat" : "0",
             "if" : "0",
             "parent" : "0",
-            "perl" : "5.008005"
+            "perl" : "5.008005",
+            "version" : "0"
          }
       },
       "test" : {
@@ -58,7 +63,7 @@
          "web" : "https://github.com/tokuhirom/Amon2-Plugin-ShareDir"
       }
    },
-   "version" : "0.0.3",
+   "version" : "v0.0.4",
    "x_contributors" : [
       "tokuhirom <tokuhirom@gmail.com>"
    ]
