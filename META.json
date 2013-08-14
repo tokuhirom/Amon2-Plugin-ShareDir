@@ -73,7 +73,7 @@
          "web" : "https://github.com/tokuhirom/Amon2-Plugin-ShareDir"
       }
    },
-   "version" : "v0.0.5",
+   "version" : "v0.0.6",
    "x_contributors" : [
       "tokuhirom <tokuhirom@gmail.com>"
    ]

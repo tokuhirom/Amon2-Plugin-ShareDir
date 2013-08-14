@@ -18,8 +18,8 @@ __THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE__.
 
 # STRATEGY
 
-- use catdir($c->base\_dir, 'share') if not installed to system
-- use dist\_dir($dist\_naem) if installed to system
+- `use catdir($c->base_dir, 'share')` if not installed to system
+- use `dist_dir($dist_name)` if installed to system
 
 # AUTHOR
 
