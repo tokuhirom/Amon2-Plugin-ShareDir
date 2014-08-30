@@ -12,9 +12,9 @@ Amon2::Plugin::ShareDir - (EXPERIMENTAL) share directory
 
 # DESCRIPTION
 
-Put assets to share/ directory. Please look [Ukigumo::Agent](http://search.cpan.org/perldoc?Ukigumo::Agent) for example.
+Put assets to share/ directory. Please look [Ukigumo::Agent](https://metacpan.org/pod/Ukigumo::Agent) for example.
 
-__THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE__.
+**THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE**.
 
 # STRATEGY
 
@@ -27,7 +27,7 @@ Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>
 
 # SEE ALSO
 
-[Amon2](http://search.cpan.org/perldoc?Amon2), [File::ShareDir](http://search.cpan.org/perldoc?File::ShareDir)
+[Amon2](https://metacpan.org/pod/Amon2), [File::ShareDir](https://metacpan.org/pod/File::ShareDir)
 
 # LICENSE
 

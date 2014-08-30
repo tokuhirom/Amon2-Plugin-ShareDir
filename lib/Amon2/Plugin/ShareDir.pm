@@ -2,7 +2,7 @@ package Amon2::Plugin::ShareDir;
 use strict;
 use warnings;
 use 5.008005;
-use version; our $VERSION = version->declare("v0.0.6");
+use version; our $VERSION = version->declare("v0.0.7");
 
 use File::Spec;
 use File::ShareDir;
